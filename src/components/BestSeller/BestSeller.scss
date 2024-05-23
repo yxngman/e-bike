@@ -1,0 +1,225 @@
+@import '../../styles/variables';
+
+.best-seller-section {
+    background-color: $gray-50;
+    padding: 50px 20px;
+
+
+    .card {
+        border-radius: 6px;
+        overflow: hidden;
+        -webkit-box-shadow: 7px 10px 14px -4px rgba(0, 0, 0, 0.26);
+        -moz-box-shadow: 7px 10px 14px -4px rgba(0, 0, 0, 0.26);
+        box-shadow: -2px 10px 12px -4px rgba(0, 0, 0, 0.10), -1px -1px 15.5px -4px rgba(0, 0, 0, 0.10);
+
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            height: 100%;
+
+            .card-top {
+                display: flex;
+                place-content: center;
+                width: 100%;
+                background-color: $primary-600;
+
+                .card-top-wrapper {
+                    width: fit-content;
+                    height: fit-content;
+                    padding: 30px 40px;
+                    text-align: center;
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: space-between;
+                    flex-direction: column;
+
+                    .title {
+                        font-size: 24px;
+                        text-align: center;
+                        line-height: 24px;
+                        font-weight: 600;
+                        margin-left: auto;
+                        margin-right: auto;
+                        color: $gray-950;
+
+                    }
+
+                    a {
+                        font-size: 16px;
+                        color: $gray-100;
+                        background-color: $white;
+                        color: $primary-600;
+                        padding: 12px 36px;
+                        border-radius: 4px;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
+
+                }
+            }
+
+            .card-body {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                padding: 20px 16px;
+                min-height: 250px;
+
+                .title {
+                    font-size: 34px;
+                    text-align: left;
+                    line-height: 34px;
+                    font-weight: 600;
+                }
+
+                p {
+                    font-size: 16px;
+                    color: $gray-950;
+                }
+
+            }
+        }
+    }
+
+    .card-xl {
+        background-color: $gray-950;
+        border-radius: 6px;
+        overflow: hidden;
+        padding: 30px;
+
+        @media screen and (min-width:1024px) {
+            padding: 34px 44px;
+        }
+
+        .card-wrapper {
+            height: 100%;
+
+            .card-top {
+                display: flex;
+                align-items: center;
+                flex-direction: column-reverse;
+                gap: 30px;
+
+                @media screen and (min-width:1024px) {
+                    flex-direction: row;
+                    gap: 40px;
+                }
+
+                .card-top-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: end;
+                    flex: 1;
+                    gap: 1.2rem;
+                    height: 100%;
+
+                    .title {
+                        font-size: 30px;
+                        font-weight: bold;
+                        line-height: 32px;
+                        color: $primary-200;
+                        text-align: center;
+                    }
+
+                    p {
+                        text-align: center;
+                        color: $gray-100;
+                    }
+
+                    @media screen and (min-width:768px) {
+                        gap: 20px;
+
+                        .title {
+                            text-align: left;
+                        }
+
+                        p {
+                            text-align: left;
+                            color: $gray-100;
+                        }
+                    }
+
+                }
+            }
+
+            .card-bottom {
+                display: flex;
+                justify-content: space-between;
+                gap: 20px;
+                flex-direction: column-reverse;
+
+                @media screen and (min-width:768px) {
+                    flex-direction: row;
+                }
+
+                .card-bottom-link {
+                    a {
+                        border-radius: 6px;
+                        border: .5px solid $gray-100;
+                        color: $gray-50;
+                        font-size: 14px;
+                        background-color: $primary-600;
+                    }
+                }
+
+                .card-bottom-content {
+                    width: fit-content;
+                    margin-left: auto;
+                    margin-right: auto;
+
+                    @media screen and (min-width:1024px) {
+                        margin-right: 60px;
+                        margin-left: 0;
+                    }
+
+                    ul {
+                        display: flex;
+                        margin: auto;
+
+                        li {
+                            color: $gray-50;
+                            font-size: 18px;
+
+                            span {
+                                font-weight: 100;
+                            }
+
+                            div {
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+            }
+
+        }
+
+
+    }
+
+    .best-seller-wrapper {
+        display: flex;
+        height: 100%;
+        gap: 20px;
+        width: 100%;
+
+
+        .grid-layout {
+            display: grid;
+            gap: 34px;
+            grid-template-columns: auto;
+            max-width: 35rem;
+            margin: auto;
+
+
+            @media screen and (min-width:768px) {
+                max-width: 100%;
+                grid-template-columns: 1fr 2fr;
+            }
+        }
+
+    }
+}

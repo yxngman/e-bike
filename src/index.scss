@@ -1,0 +1,91 @@
+@import '/src/styles/variables';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+
+body {
+    background-color: $bg-black;
+}
+
+.text-primary {
+    color: $primary-600;
+}
+
+.css-4t3x6l-MuiPaper-root-MuiDrawer-paper {
+    background-color: #000000 !important;
+}
+
+.side-menu {
+    overflow-y: auto;
+    height: 100%;
+}
+
+.side-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.side-menu a.active {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.side-menu-nav {
+    display: grid;
+    column-gap: 20px;
+}
+
+.side-menu-nav a {
+    font-size: 14px;
+}
+
+.side-menu-nav li {
+    padding: 20px 0;
+}
+
+.side-menu-nav li:not(:last-child) {
+    border-bottom: 1px solid #1a1a1a;
+}
+
+button {
+    border-radius: 4px;
+}
+
+.btn-primary {
+    background-color: $primary-600;
+    color: $white;
+
+    &:hover {
+        background-color: $primary-700;
+    }
+}
+
+.btn-primary-border {
+    border: 1px solid $primary-600;
+    color: $white;
+}
+
+.btn-primary-border-2 {
+    border: 1px solid $primary-200;
+    color: $primary-600;
+
+    &:hover {
+        background-color: $primary-200;
+        color: $primary-700;
+    }
+}
+
+.btn-white {
+    background-color: $gray-50 ;
+    color: $primary-600;
+
+    &:hover {
+        background-color: $white;
+    }
+}

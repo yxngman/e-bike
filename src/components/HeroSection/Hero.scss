@@ -1,0 +1,42 @@
+@import '../../styles/variables';
+
+.hero-section {
+
+    .hero-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 30px;
+        flex-direction: column;
+        padding: 16px;
+
+        .hero-span-tag {
+            padding: 10px 15px;
+            background-color: $gray-900;
+            color: white;
+            border-radius: 4px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 1.2;
+            letter-spacing: 1px;
+            color: white;
+        }
+
+        p {
+            color: $gray-100;
+        }
+
+        @media (min-width: 768px) {
+            flex-direction: row;
+
+            h1 {
+                font-size: 60px;
+                font-weight: 800;
+            }
+        }
+    }
+
+}

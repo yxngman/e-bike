@@ -1,0 +1,307 @@
+@import '../../styles/variables';
+
+
+.navbar {
+    background-color: $gray-1000;
+    height: 92px;
+    position: sticky;
+    top: 0;
+
+    .nav-wrapper {
+        display: flex;
+        margin-left: auto;
+        margin-right: auto;
+        align-items: center;
+        height: 100%;
+        padding: 18px;
+        box-sizing: border-box;
+        justify-content: space-between;
+        position: relative;
+
+        @media (min-width: 768px) {
+            padding: 24px;
+            gap: 24px;
+            justify-content: space-between;
+        }
+
+        .nav-toggler {
+            padding: 12px 10px;
+            border-radius: 4px;
+            min-width: fit-content;
+            background-color: transparent;
+            transition: background-color 0.3s ease;
+
+            &:hover {
+                background-color: $bg-black-hover;
+            }
+        }
+
+
+        .searchbox {
+
+
+            @media (min-width: 1280px) {
+                margin-left: 0;
+            }
+
+            .searchbox-wrapper {
+                width: 100%;
+                display: none;
+                align-items: center;
+                border-radius: 4px;
+
+                @media (min-width: 768px) {
+                    display: flex;
+                    background-color: $gray-900;
+                }
+
+
+                .searchbox-input {
+                    width: 100%;
+                    display: none;
+                    align-items: center;
+                    flex: 1;
+                    display: flex;
+
+
+                    input {
+                        width: 100%;
+                        background-color: transparent;
+                        color: $gray-50;
+                        height: 44px;
+                        padding: 0 20px;
+
+                        &:focus {
+                            outline: none;
+
+                        }
+                    }
+                }
+
+                span {
+                    cursor: pointer;
+                    border-radius: 50%;
+                    padding: 8px;
+                    transition: background-color 0.3s ease;
+                    margin-left: auto;
+
+
+
+                    @media (min-width: 768px) {
+                        height: auto;
+                        width: auto;
+                        border-radius: 0;
+                        padding: 5px 18px;
+                        margin-left: auto;
+
+
+                        &:hover {
+                            background-color: transparent;
+                        }
+                    }
+
+                    &:hover {
+                        &:hover {
+                            background-color: $gray-900;
+                        }
+
+                        svg {}
+                    }
+
+
+                }
+            }
+
+
+            button.search-toggler {
+                cursor: pointer;
+                border-radius: 50%;
+                padding: 8px;
+                transition: background-color 0.3s ease;
+                display: block;
+
+                @media (min-width: 768px) {
+                    height: auto;
+                    width: auto;
+                    border-radius: 0;
+                    padding: 5px 18px;
+                    display: none !important;
+
+
+                    &:hover {
+                        background-color: transparent;
+                    }
+                }
+
+                &:hover {
+                    &:hover {
+                        background-color: $gray-900;
+                    }
+
+                    svg {}
+                }
+
+
+            }
+        }
+
+        .sm-searchbox {
+            @media (min-width: 768px) {
+                gap: 16px;
+            }
+
+            visibility: hidden;
+
+
+            &.visible {
+                visibility: visible;
+            }
+
+            right: 0;
+            left: 0;
+            position: absolute;
+            width: 100%;
+            padding: 0;
+            background-color: $gray-1000;
+
+            .searchbox-wrapper {
+                width: 100%;
+                display: flex;
+                align-items: center;
+                border-radius: 4px;
+                background-color: $gray-1000;
+                margin-top: 18px;
+                opacity: 0;
+                transition: opacity 0.6s ease-in-out;
+
+                &.visible {
+                    opacity: 1;
+                }
+
+
+                .searchbox-input {
+                    width: 100%;
+                    align-items: center;
+                    flex: 1;
+                    display: flex;
+
+                    input {
+                        width: 100%;
+                        background-color: transparent;
+                        color: $gray-50;
+                        height: 44px;
+                        padding: 0 20px;
+
+                        &:focus {
+                            outline: none;
+
+                        }
+                    }
+                }
+
+                span {
+                    cursor: pointer;
+                    padding: 8px;
+                    transition: background-color 0.5s ease;
+                    margin-left: auto;
+                    border-radius: 50%;
+                    padding: 12px 12px;
+                    margin-right: 10px;
+
+                    &:hover {
+                        &:hover {
+                            background-color: $gray-900;
+                        }
+
+                        svg {}
+                    }
+
+
+                }
+            }
+        }
+
+        .nav-links {
+            margin-left: 5px;
+            margin-right: 5px;
+
+            .nav-link-wrapper {
+                li {
+                    display: inline-block;
+                    margin-left: 14px;
+                    margin-right: 14px;
+
+                    &:first-child {
+                        margin-left: 0;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    a {
+                        color: $gray-300;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        letter-spacing: 1px;
+                        transition: all 0.6s linear;
+                    }
+
+                    a:hover {
+                        color: #fff;
+                    }
+                }
+
+            }
+        }
+
+        .nav-right {
+            .nav-right-wrapper {
+                display: flex;
+
+
+                @media (min-width: 768px) {
+                    gap: 16px;
+                }
+
+
+                li {
+                    display: inline-block;
+                    margin-left: 10px;
+                    margin-right: 10px;
+
+                    a {
+                        color: $gray-300;
+                        font-size: 14px;
+                        font-weight: 400;
+                        text-decoration: none;
+                        line-height: 1.5;
+                        letter-spacing: 1px;
+
+                        svg {
+                            height: 18px;
+                            width: 18px;
+
+                            path {
+                                fill: $gray-100;
+                            }
+
+                            @media (min-width: 768px) {
+                                height: 22px;
+                                width: 22px;
+                            }
+
+
+                        }
+                    }
+
+                    a:hover {
+                        color: $primary-600;
+                    }
+                }
+            }
+        }
+    }
+}

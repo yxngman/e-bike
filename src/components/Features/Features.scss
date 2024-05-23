@@ -1,0 +1,58 @@
+@import '../../styles/variables';
+
+.features-section {
+    color: #fff;
+
+    .features-wrapper {
+        display: flex;
+        height: 100%;
+        gap: 20px;
+        overflow-x: scroll;
+        padding-left: 20px;
+        padding-right: 20px;
+
+        .card {
+            border-radius: 6px;
+            padding: 44px 26px;
+            background-color: $gray-950;
+            transition: min-width cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.3s linear;
+
+            .card-wrapper {
+                display: flex;
+                flex-direction: column;
+
+                .card-img {
+                    display: flex;
+                    place-content: center;
+                    width: 100%;
+                    margin-bottom: 48px;
+
+                    .card-img-wrapper {
+                        border-radius: 6px;
+                        width: fit-content;
+                        height: fit-content;
+                        padding: 20px;
+                        background-color: $bg-black;
+                    }
+                }
+
+                .card-body {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    text-align: center;
+
+                    .card-heading {
+                        font-size: 26px;
+                    }
+
+                    .card-p {
+                        font-size: 16px;
+                        color: $gray-100;
+                    }
+
+                }
+            }
+        }
+    }
+}
